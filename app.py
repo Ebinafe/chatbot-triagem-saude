@@ -374,13 +374,13 @@ class SistemaTriagem:
         ]
         gravidade_maxima = max(gravidades) if gravidades else 0
         
-        if gravidade_maxima == 3 or intensidade >= 8:
+        if gravidade_maxima == 3 and intensidade >= 8:
             return {
                 "nivel": "VERMELHO",
                 "texto": "EMERGÊNCIA",
                 "subtexto": "Atendimento Imediato Necessário",
                 "cor": "vermelho",
-                "recomendacao": "🚨 DIRIJA-SE IMEDIATAMENTE ao pronto-socorro ou ligue 192 (SAMU). Esta é uma situação de emergência que requer atenção médica urgente.",
+                "recomendacao": "🚨 DIRIJA-SE IMEDIATAMENTE ao pronto-socorro ou ligue 808 242 242 (SNS). Esta é uma situação de emergência que requer atenção médica urgente.",
                 "emoji": "🔴"
             }
         elif gravidade_maxima == 2 or intensidade >= 5:
